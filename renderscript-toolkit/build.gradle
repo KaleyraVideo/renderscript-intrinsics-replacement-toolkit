@@ -7,6 +7,7 @@ android {
     namespace = "com.google.android.renderscript"
 
     compileSdkVersion = 34
+    ndkVersion = "28.1.13356709"
 
     defaultConfig {
         minSdkVersion 21
@@ -19,6 +20,7 @@ android {
         externalNativeBuild {
             cmake {
                 cppFlags "-std=c++17"
+                arguments "-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON"
             }
         }
     }
